@@ -1,0 +1,23 @@
+#add right to file
+docker run --rm -v "/home/amouly/Documents/Data_piscine/engineer/data_volume:/tmp/data_volume" ubuntu chmod -R 777 /tmp/data_volume
+
+
+#SQL QUERY TO CREATE TABLE
+CREATE TABLE data_2022_oct (
+    event_time TIMESTAMPTZ NOT NULL,
+    event_type TEXT,
+    product_id INTEGER,
+    price FLOAT,
+    user_id BIGINT,
+    user_session UUID
+);
+
+
+#SQL QUERY TO IMPORT DATA
+COPY data_2022_oct 
+FROM '/csv_files/customer/data_2022_oct.csv' 
+DELIMITER ',' 
+CSV HEADER;
+
+#SQL QUERY TO QUERY DATA
+SELECT * FROM data_2022_oct LIMIT 10;

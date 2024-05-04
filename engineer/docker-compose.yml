@@ -6,7 +6,8 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - db:/var/lib/postgresql/data
+      - ./data_volume:/var/lib/postgresql/data
+      - ./csv_files:/csv_files
     restart: unless-stopped
     networks:
       - engineer
@@ -14,9 +15,10 @@ services:
   pgadmin:
     container_name: pgadmin
     image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@admin.com
-      PGADMIN_DEFAULT_PASSWORD: root
+    env_file: .env
+    # environment:
+    #   PGADMIN_DEFAULT_EMAIL: admin@admin.com
+    #   PGADMIN_DEFAULT_PASSWORD: root
     ports:
       - 14140:80
     restart: unless-stopped
@@ -24,15 +26,10 @@ services:
       - db
     networks:
       - engineer
-
-volumes:
-  db:
-    driver: local
-    driver_opts:
-      type: none
-      device: data_volume
-      o: bind
+    volumes:
+      - ./csv_files:/csv_files
 
 networks:
   engineer:
     driver: bridge
+
