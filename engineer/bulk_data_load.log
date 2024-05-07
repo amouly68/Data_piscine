@@ -1,5 +1,170 @@
-2024-05-06 14:11:18,776 - INFO - Skipping non-CSV file: .~lock.data_2022_dec.csv#
-2024-05-06 14:11:18,777 - INFO - Processing file: data_2022_dec.csv
-2024-05-06 14:11:41,267 - INFO - Data loaded into data_2022_dec successfully.
-2024-05-06 14:11:41,484 - INFO - Data committed to the table data_2022_dec.
-2024-05-06 14:11:41,484 - INFO - Processing file: data_2022_nov.csv
+2024-05-07 11:29:48,352 - INFO - Skipping non-CSV file: .~lock.data_2022_dec.csv#
+2024-05-07 11:29:48,352 - INFO - Processing file: data_2022_dec.csv
+2024-05-07 11:29:53,443 - INFO - Number of rows in DataFrame: 3533286
+2024-05-07 11:29:53,450 - INFO - First 2 rows:
+                event_time        event_type  product_id  price    user_id                          user_session
+0  2022-12-01 00:00:00 UTC  remove_from_cart     5712790   6.27  576802932  51d85cb0-897f-48d2-918b-ad63965c12dc
+1  2022-12-01 00:00:00 UTC              view     5764655  29.05  412120092  8adff31e-2051-4894-9758-224bfa8aec18
+2024-05-07 11:29:53,456 - INFO - Last 2 rows:
+                      event_time event_type  product_id  price    user_id                          user_session
+3533284  2022-12-31 23:59:52 UTC       view     5775982  11.90  397780878  7e8a2b85-153a-44eb-a71f-b748fde14fcc
+3533285  2022-12-31 23:59:57 UTC       view     5635090   4.44  420652863  546f6af3-a517-4752-a98b-80c4c5860711
+2024-05-07 11:30:24,040 - INFO - Data loaded into data_2022_dec successfully.
+2024-05-07 11:30:24,703 - INFO - Number of rows in the table data_2022_dec: 3533286
+2024-05-07 11:30:24,707 - INFO - First 2 rows in the table:
+(datetime.datetime(2022, 12, 1, 0, 0, tzinfo=datetime.timezone.utc), 'remove_from_cart', 5712790, 6.27, 576802932, '51d85cb0-897f-48d2-918b-ad63965c12dc')
+(datetime.datetime(2022, 12, 1, 0, 0, tzinfo=datetime.timezone.utc), 'view', 5764655, 29.05, 412120092, '8adff31e-2051-4894-9758-224bfa8aec18')
+2024-05-07 11:34:37,697 - INFO - Skipping non-CSV file: .~lock.data_2022_dec.csv#
+2024-05-07 11:34:37,697 - INFO - Processing file: data_2022_dec.csv
+2024-05-07 11:34:41,908 - INFO - Number of rows in DataFrame: 3533286
+2024-05-07 11:34:41,915 - INFO - First 2 rows:
+                event_time        event_type  product_id  price    user_id                          user_session
+0  2022-12-01 00:00:00 UTC  remove_from_cart     5712790   6.27  576802932  51d85cb0-897f-48d2-918b-ad63965c12dc
+1  2022-12-01 00:00:00 UTC              view     5764655  29.05  412120092  8adff31e-2051-4894-9758-224bfa8aec18
+2024-05-07 11:34:41,921 - INFO - Last 2 rows:
+                      event_time event_type  product_id  price    user_id                          user_session
+3533284  2022-12-31 23:59:52 UTC       view     5775982  11.90  397780878  7e8a2b85-153a-44eb-a71f-b748fde14fcc
+3533285  2022-12-31 23:59:57 UTC       view     5635090   4.44  420652863  546f6af3-a517-4752-a98b-80c4c5860711
+2024-05-07 11:35:00,106 - INFO - Data loaded into data_2022_dec successfully.
+2024-05-07 11:35:00,203 - INFO - Number of rows in the table data_2022_dec: 3533286
+2024-05-07 11:35:00,205 - INFO - First 2 rows in the table:
+(datetime.datetime(2022, 12, 1, 0, 0, tzinfo=datetime.timezone.utc), 'remove_from_cart', 5712790, 6.27, 576802932, '51d85cb0-897f-48d2-918b-ad63965c12dc')
+(datetime.datetime(2022, 12, 1, 0, 0, tzinfo=datetime.timezone.utc), 'view', 5764655, 29.05, 412120092, '8adff31e-2051-4894-9758-224bfa8aec18')
+2024-05-07 11:39:56,971 - INFO - Skipping non-CSV file: .~lock.data_2022_dec.csv#
+2024-05-07 11:39:56,971 - INFO - Processing file: data_2022_dec.csv
+2024-05-07 11:40:01,825 - INFO - Number of rows in DataFrame: 3533286
+2024-05-07 11:40:01,832 - INFO - First 2 rows:
+                event_time        event_type  product_id  price    user_id                          user_session
+0  2022-12-01 00:00:00 UTC  remove_from_cart     5712790   6.27  576802932  51d85cb0-897f-48d2-918b-ad63965c12dc
+1  2022-12-01 00:00:00 UTC              view     5764655  29.05  412120092  8adff31e-2051-4894-9758-224bfa8aec18
+2024-05-07 11:40:01,837 - INFO - Last 2 rows:
+                      event_time event_type  product_id  price    user_id                          user_session
+3533284  2022-12-31 23:59:52 UTC       view     5775982  11.90  397780878  7e8a2b85-153a-44eb-a71f-b748fde14fcc
+3533285  2022-12-31 23:59:57 UTC       view     5635090   4.44  420652863  546f6af3-a517-4752-a98b-80c4c5860711
+2024-05-07 11:40:22,842 - INFO - Data loaded into data_2022_dec successfully.
+2024-05-07 11:40:24,046 - INFO - Number of rows in the table data_2022_dec: 3533286
+2024-05-07 11:40:24,048 - INFO - First 2 rows in the table:
+(datetime.datetime(2022, 12, 1, 0, 0, tzinfo=datetime.timezone.utc), 'remove_from_cart', 5712790, 6.27, 576802932, '51d85cb0-897f-48d2-918b-ad63965c12dc')
+(datetime.datetime(2022, 12, 1, 0, 0, tzinfo=datetime.timezone.utc), 'view', 5764655, 29.05, 412120092, '8adff31e-2051-4894-9758-224bfa8aec18')
+2024-05-07 11:40:24,728 - INFO - Last 2 rows in the table:
+(datetime.datetime(2022, 12, 31, 23, 59, 52, tzinfo=datetime.timezone.utc), 'view', 5775982, 11.9, 397780878, '7e8a2b85-153a-44eb-a71f-b748fde14fcc')
+(datetime.datetime(2022, 12, 31, 23, 59, 57, tzinfo=datetime.timezone.utc), 'view', 5635090, 4.44, 420652863, '546f6af3-a517-4752-a98b-80c4c5860711')
+2024-05-07 11:40:24,916 - INFO - Processing file: data_2023_jan.csv
+2024-05-07 11:40:32,365 - INFO - Number of rows in DataFrame: 4264752
+2024-05-07 11:40:32,371 - INFO - First 2 rows:
+                event_time event_type  product_id  price    user_id                          user_session
+0  2023-01-01 00:00:00 UTC       view     5809910   5.24  595414620  4adb70bb-edbd-4981-b60f-a05bfd32683a
+1  2023-01-01 00:00:09 UTC       view     5812943   3.97  595414640  c8c5205d-be43-4f1d-aa56-4828b8151c8a
+2024-05-07 11:40:32,377 - INFO - Last 2 rows:
+                      event_time        event_type  product_id  price    user_id                          user_session
+4264750  2023-01-31 23:59:57 UTC  remove_from_cart     5820745   2.22  607092857  a4ccd1c4-a9d2-48d0-9816-082ec5bb5e47
+4264751  2023-01-31 23:59:58 UTC  remove_from_cart     5820745   2.22  607092857  a4ccd1c4-a9d2-48d0-9816-082ec5bb5e47
+2024-05-07 11:41:13,775 - INFO - Data loaded into data_2023_jan successfully.
+2024-05-07 11:41:15,581 - INFO - Number of rows in the table data_2023_jan: 4264752
+2024-05-07 11:41:15,581 - INFO - First 2 rows in the table:
+(datetime.datetime(2023, 1, 1, 0, 0, tzinfo=datetime.timezone.utc), 'view', 5809910, 5.24, 595414620, '4adb70bb-edbd-4981-b60f-a05bfd32683a')
+(datetime.datetime(2023, 1, 1, 0, 0, 9, tzinfo=datetime.timezone.utc), 'view', 5812943, 3.97, 595414640, 'c8c5205d-be43-4f1d-aa56-4828b8151c8a')
+2024-05-07 11:41:17,149 - INFO - Last 2 rows in the table:
+(datetime.datetime(2023, 1, 31, 23, 59, 57, tzinfo=datetime.timezone.utc), 'remove_from_cart', 5820745, 2.22, 607092857, 'a4ccd1c4-a9d2-48d0-9816-082ec5bb5e47')
+(datetime.datetime(2023, 1, 31, 23, 59, 58, tzinfo=datetime.timezone.utc), 'remove_from_cart', 5820745, 2.22, 607092857, 'a4ccd1c4-a9d2-48d0-9816-082ec5bb5e47')
+2024-05-07 11:41:17,394 - INFO - Processing file: data_2022_nov.csv
+2024-05-07 11:41:30,021 - INFO - Number of rows in DataFrame: 4635837
+2024-05-07 11:41:30,028 - INFO - First 2 rows:
+                event_time event_type  product_id  price    user_id                          user_session
+0  2022-11-01 00:00:02 UTC       view     5802432   0.32  562076640  09fafd6c-6c99-46b1-834f-33527f4de241
+1  2022-11-01 00:00:09 UTC       cart     5844397   2.38  553329724  2067216c-31b5-455d-a1cc-af0575a34ffb
+2024-05-07 11:41:30,033 - INFO - Last 2 rows:
+                      event_time event_type  product_id  price    user_id                          user_session
+4635835  2022-11-30 23:59:57 UTC       view     5779406   2.86  540006764  d4b5aa49-d731-40f1-92f1-277416d6e063
+4635836  2022-11-30 23:59:58 UTC       view     5880201   3.76  579969854  e9fa2c3e-8c9e-448c-880a-21ca57c18b3b
+2024-05-07 11:42:04,779 - INFO - Data loaded into data_2022_nov successfully.
+2024-05-07 11:42:07,123 - INFO - Number of rows in the table data_2022_nov: 4635837
+2024-05-07 11:42:07,124 - INFO - First 2 rows in the table:
+(datetime.datetime(2022, 11, 1, 0, 0, 2, tzinfo=datetime.timezone.utc), 'view', 5802432, 0.32, 562076640, '09fafd6c-6c99-46b1-834f-33527f4de241')
+(datetime.datetime(2022, 11, 1, 0, 0, 9, tzinfo=datetime.timezone.utc), 'cart', 5844397, 2.38, 553329724, '2067216c-31b5-455d-a1cc-af0575a34ffb')
+2024-05-07 11:42:08,019 - INFO - Last 2 rows in the table:
+(datetime.datetime(2022, 11, 30, 23, 59, 57, tzinfo=datetime.timezone.utc), 'view', 5779406, 2.86, 540006764, 'd4b5aa49-d731-40f1-92f1-277416d6e063')
+(datetime.datetime(2022, 11, 30, 23, 59, 58, tzinfo=datetime.timezone.utc), 'view', 5880201, 3.76, 579969854, 'e9fa2c3e-8c9e-448c-880a-21ca57c18b3b')
+2024-05-07 11:42:08,247 - INFO - Processing file: data_2022_oct.csv
+2024-05-07 11:42:19,962 - INFO - Number of rows in DataFrame: 4102283
+2024-05-07 11:42:19,968 - INFO - First 2 rows:
+                event_time event_type  product_id  price    user_id                          user_session
+0  2022-10-01 00:00:00 UTC       cart     5773203   2.62  463240011  26dd6e6e-4dac-4778-8d2c-92e149dab885
+1  2022-10-01 00:00:03 UTC       cart     5773353   2.62  463240011  26dd6e6e-4dac-4778-8d2c-92e149dab885
+2024-05-07 11:42:19,974 - INFO - Last 2 rows:
+                      event_time event_type  product_id  price    user_id                          user_session
+4102281  2022-10-31 23:59:36 UTC       view     5870838   0.79  429913900  2f0bff3c-252f-4fe6-afcd-5d8a6a92839a
+4102282  2022-10-31 23:59:54 UTC       view       59996   4.13  566280798  4eaf7c71-e8bf-4ea6-b719-eca144466eb3
+2024-05-07 11:42:45,195 - INFO - Data loaded into data_2022_oct successfully.
+2024-05-07 11:42:46,424 - INFO - Number of rows in the table data_2022_oct: 4102283
+2024-05-07 11:42:46,424 - INFO - First 2 rows in the table:
+(datetime.datetime(2022, 10, 1, 0, 0, tzinfo=datetime.timezone.utc), 'cart', 5773203, 2.62, 463240011, '26dd6e6e-4dac-4778-8d2c-92e149dab885')
+(datetime.datetime(2022, 10, 1, 0, 0, 3, tzinfo=datetime.timezone.utc), 'cart', 5773353, 2.62, 463240011, '26dd6e6e-4dac-4778-8d2c-92e149dab885')
+2024-05-07 11:42:46,811 - INFO - Last 2 rows in the table:
+(datetime.datetime(2022, 10, 31, 23, 59, 36, tzinfo=datetime.timezone.utc), 'view', 5870838, 0.79, 429913900, '2f0bff3c-252f-4fe6-afcd-5d8a6a92839a')
+(datetime.datetime(2022, 10, 31, 23, 59, 54, tzinfo=datetime.timezone.utc), 'view', 59996, 4.13, 566280798, '4eaf7c71-e8bf-4ea6-b719-eca144466eb3')
+2024-05-07 11:42:47,193 - INFO - Processing file: item.csv
+2024-05-07 11:42:47,364 - INFO - Number of rows in DataFrame: 109579
+2024-05-07 11:42:47,371 - INFO - First 2 rows:
+   product_id   category_id category_code  brand
+0     5712790  1.487580e+18           NaN  f.o.x
+1     5764655  1.487580e+18           NaN    cnd
+2024-05-07 11:42:47,378 - INFO - Last 2 rows:
+        product_id   category_id category_code  brand
+109577     5725690  1.487580e+18           NaN    NaN
+109578     5736400  1.487580e+18           NaN  irisk
+2024-05-07 11:45:48,980 - INFO - Skipping non-CSV file: .~lock.data_2022_dec.csv#
+2024-05-07 11:45:48,980 - INFO - Processing file: data_2022_dec.csv
+2024-05-07 11:45:48,985 - INFO - Table data_2022_dec already exists. Skipping creation and data import.
+2024-05-07 11:45:48,985 - INFO - Skipping import for data_2022_dec as table already exists.
+2024-05-07 11:45:48,985 - INFO - Processing file: data_2023_jan.csv
+2024-05-07 11:45:48,986 - INFO - Table data_2023_jan already exists. Skipping creation and data import.
+2024-05-07 11:45:48,986 - INFO - Skipping import for data_2023_jan as table already exists.
+2024-05-07 11:45:48,986 - INFO - Processing file: data_2022_nov.csv
+2024-05-07 11:45:48,987 - INFO - Table data_2022_nov already exists. Skipping creation and data import.
+2024-05-07 11:45:48,988 - INFO - Skipping import for data_2022_nov as table already exists.
+2024-05-07 11:45:48,988 - INFO - Processing file: data_2022_oct.csv
+2024-05-07 11:45:48,989 - INFO - Table data_2022_oct already exists. Skipping creation and data import.
+2024-05-07 11:45:48,989 - INFO - Skipping import for data_2022_oct as table already exists.
+2024-05-07 11:45:49,039 - INFO - Processing file: item.csv
+2024-05-07 11:45:49,160 - INFO - Number of rows in DataFrame: 109579
+2024-05-07 11:45:49,167 - INFO - First 2 rows:
+   product_id          category_id category_code  brand
+0     5712790  1487580005268456192           NaN  f.o.x
+1     5764655  1487580005411062528           NaN    cnd
+2024-05-07 11:45:49,172 - INFO - Last 2 rows:
+        product_id          category_id category_code  brand
+109577     5725690  1487580010796548096           NaN    NaN
+109578     5736400  1487580007575323648           NaN  irisk
+2024-05-07 11:45:49,352 - INFO - Data loaded into item successfully.
+2024-05-07 11:45:49,359 - INFO - Number of rows in the table item: 109579
+2024-05-07 11:45:49,360 - INFO - First 2 rows in the table:
+(5712790, 1487580005268456192, None, 'f.o.x')
+(5764655, 1487580005411062528, None, 'cnd')
+2024-05-07 11:50:23,189 - INFO - Skipping non-CSV file: .~lock.data_2022_dec.csv#
+2024-05-07 11:50:23,189 - INFO - Processing file: data_2022_dec.csv
+2024-05-07 11:50:23,192 - INFO - Table data_2022_dec already exists. Skipping creation and data import.
+2024-05-07 11:50:23,192 - INFO - Skipping import for data_2022_dec as table already exists.
+2024-05-07 11:50:23,192 - INFO - Processing file: data_2023_jan.csv
+2024-05-07 11:50:23,193 - INFO - Table data_2023_jan already exists. Skipping creation and data import.
+2024-05-07 11:50:23,193 - INFO - Skipping import for data_2023_jan as table already exists.
+2024-05-07 11:50:23,193 - INFO - Processing file: data_2022_nov.csv
+2024-05-07 11:50:23,194 - INFO - Table data_2022_nov already exists. Skipping creation and data import.
+2024-05-07 11:50:23,194 - INFO - Skipping import for data_2022_nov as table already exists.
+2024-05-07 11:50:23,194 - INFO - Processing file: data_2022_oct.csv
+2024-05-07 11:50:23,195 - INFO - Table data_2022_oct already exists. Skipping creation and data import.
+2024-05-07 11:50:23,195 - INFO - Skipping import for data_2022_oct as table already exists.
+2024-05-07 11:50:23,209 - INFO - Processing file: item.csv
+2024-05-07 11:50:23,432 - INFO - Number of rows in DataFrame: 109579
+2024-05-07 11:50:23,596 - INFO - Data loaded into item successfully.
+2024-05-07 11:50:23,603 - INFO - Number of rows in the table item: 109579
+2024-05-07 11:50:23,607 - INFO - First row of the dataframe:
+   product_id          category_id category_code  brand
+0     5712790  1487580005268456192           NaN  f.o.x
+2024-05-07 11:50:23,608 - INFO - First row of the table:
+(5712790, 1487580005268456192, None, 'f.o.x')
+2024-05-07 11:50:23,611 - INFO - Last row of the dataframe:
+        product_id          category_id category_code  brand
+109578     5736400  1487580007575323648           NaN  irisk
+2024-05-07 11:50:23,634 - INFO - Last row in the table:
+(5736400, 1487580007575323648, None, 'irisk')

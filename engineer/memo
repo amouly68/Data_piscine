@@ -13,6 +13,14 @@ CREATE TABLE data_2022_oct (
 );
 
 
+CREATE TABLE item (
+    product_id INTEGER,
+    category_id BIGINT,
+    category_code TEXT,
+    brand TEXT
+);
+
+
 #SQL QUERY TO IMPORT DATA
 COPY data_2022_oct 
 FROM '/csv_files/customer/data_2022_oct.csv' 

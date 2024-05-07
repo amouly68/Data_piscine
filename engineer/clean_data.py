@@ -1,9 +1,21 @@
 import pandas as pd
 
-data = pd.read_csv("csv_files/customer/data_2022_oct.csv")
-data.head()
-data.info()
-data.describe()
+oct = pd.read_csv("csv_files/customer/data_2022_oct.csv")
+oct.head()
+oct.info()
+oct.describe()
+
+nov = pd.read_csv("csv_files/customer/data_2022_nov.csv")
+nov.head()
+nov.info()
+
+dec = pd.read_csv("csv_files/customer/data_2022_dec.csv")
+dec.head()
+dec.info()
+
+jan = pd.read_csv("csv_files/customer/data_2023_jan.csv")
+jan.head()
+jan.info()
 
 item = pd.read_csv("csv_files/item/item.csv")
 item.head()
