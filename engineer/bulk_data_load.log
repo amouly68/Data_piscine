@@ -1,0 +1,5 @@
+2024-05-06 14:11:18,776 - INFO - Skipping non-CSV file: .~lock.data_2022_dec.csv#
+2024-05-06 14:11:18,777 - INFO - Processing file: data_2022_dec.csv
+2024-05-06 14:11:41,267 - INFO - Data loaded into data_2022_dec successfully.
+2024-05-06 14:11:41,484 - INFO - Data committed to the table data_2022_dec.
+2024-05-06 14:11:41,484 - INFO - Processing file: data_2022_nov.csv

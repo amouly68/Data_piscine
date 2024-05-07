@@ -1,0 +1,5 @@
+2024-05-06 12:05:48,247 - INFO - Number of rows in DataFrame: 4102283
+2024-05-06 12:05:57,585 - ERROR - An error occurred: relation "data_2022_oct" does not exist
+
+2024-05-06 13:48:31,323 - INFO - Number of rows in DataFrame: 4102283
+2024-05-06 13:48:59,991 - INFO - Number of rows in the table data_2022_oct: 4102283
