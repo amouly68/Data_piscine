@@ -1,0 +1,40 @@
+
+
+# Suppose df1 et df2 sont vos DataFrames
+are_identical = df1.equals(df2)
+
+print("Les deux DataFrames sont identiques :", are_identical)
+
+# Comparer les informations des DataFrames
+print(df1.info())
+print(df2.info())
+
+# Comparaison des types de colonnes
+are_types_same = (df1.dtypes == df2.dtypes).all()
+print("Les types de toutes les colonnes sont identiques :", are_types_same)
+
+
+
+
+--- SQL pour verifier l'identicite de 2 tables ---
+
+SELECT * FROM table1
+EXCEPT
+SELECT * FROM table2;
+
+SELECT * FROM table2
+EXCEPT
+SELECT * FROM table1;
+
+
+
+-- les infos (nom de colonnes): 
+
+SELECT column_name, data_type, is_nullable
+FROM information_schema.columns
+WHERE table_name = 'table1'
+EXCEPT
+SELECT column_name, data_type, is_nullable
+FROM information_schema.columns
+WHERE table_name = 'table2';
+

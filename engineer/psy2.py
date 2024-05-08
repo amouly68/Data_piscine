@@ -47,7 +47,9 @@ def load_data_from_csv(path, tableName, cursor):
     """Load data from CSV to the specified table."""
     df = pd.read_csv(path)
 
-    df['category_id'] = pd.to_numeric(df['category_id'], errors='coerce').fillna(0).astype('int64')
+    
+    if tableName == "item":
+        df['category_id'] = pd.to_numeric(df['category_id'], errors='coerce').fillna(0).astype('int64')
 
     logging.info(f"Number of rows in DataFrame: {len(df)}")
     

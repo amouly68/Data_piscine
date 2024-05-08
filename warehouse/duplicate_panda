@@ -1,0 +1,40 @@
+import pandas as pd
+import psycopg2
+from sqlalchemy import create_engine
+
+# Paramètres de connexion à la base de données
+DATABASE_URI = "postgresql://user:password@localhost:5432/your_database_name"
+
+# Connexion à la base de données
+engine = create_engine(DATABASE_URI)
+conn = engine.connect()
+
+# Charger les données dans un DataFrame
+query = "SELECT * FROM your_table_name ORDER BY user_id, user_session, event_time"
+df = pd.read_sql(query, conn)
+
+# Identifier les doublons consécutifs
+df['is_duplicate'] = (df['event_type'] == df['event_type'].shift(1)) & \
+                     (df['product_id'] == df['product_id'].shift(1)) & \
+                     (df['user_id'] == df['user_id'].shift(1)) & \
+                     (df['user_session'] == df['user_session'].shift(1))
+
+# Filtrer les doublons
+duplicates = df[df['is_duplicate']]
+
+# Supprimer les doublons du DataFrame original
+df_cleaned = df[~df['is_duplicate']]
+
+# Optionnel: Écrire le DataFrame nettoyé retour dans la base de données
+# Cela peut être fait en remplaçant la table ou en faisant des suppressions et insertions
+# Pour des raisons de sécurité, faites attention avec ces opérations:
+# df_cleaned.to_sql('your_table_name', con=conn, if_exists='replace', index=False)
+
+# Fermer la connexion
+conn.close()
+
+# Afficher les résultats
+print("Doublons identifiés :")
+print(duplicates)
+print("DataFrame nettoyé :")
+print(df_cleaned.head())
