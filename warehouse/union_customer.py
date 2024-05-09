@@ -43,7 +43,8 @@ def create_merged_table():
         
     except Exception as e:
         logging.error(f"An error occurred: {e}")
-        conn.rollback()
+        if conn:
+            conn.rollback()
         
     finally:
         if conn:

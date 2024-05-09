@@ -166,3 +166,47 @@ DupRows AS (
 SELECT * INTO DuplicateTable
 FROM DupRows
 ORDER BY event_time;
+
+
+
+
+WITH
+DupCheck AS (
+    SELECT 
+        event_time,
+        event_type,
+        product_id,
+        user_id,
+        user_session,
+        LAG(event_time) OVER (PARTITION BY user_id, user_session, product_id, event_type ORDER BY event_time) AS prev_event_time,
+        EXTRACT(EPOCH FROM event_time - LAG(event_time) OVER (PARTITION BY user_id, user_session, product_id, event_type ORDER BY event_time)) AS time_diff
+    FROM test_table
+),
+DupRows AS (
+    SELECT 
+        prev_event_time AS event_time,
+        event_type,
+        product_id,
+        user_id,
+        user_session
+    FROM DupCheck
+    WHERE 
+        prev_event_time IS NOT NULL AND
+        ABS(time_diff) <= 1  -- Condition pour la fourchette de 1 seconde
+
+    UNION ALL
+
+    SELECT 
+        event_time,
+        event_type,
+        product_id,
+        user_id,
+        user_session
+    FROM DupCheck
+    WHERE 
+        prev_event_time IS NOT NULL AND
+        ABS(time_diff) <= 1  -- Condition pour la fourchette de 1 seconde
+)
+SELECT * INTO DuplicateTable1
+FROM DupRows
+ORDER BY event_time;

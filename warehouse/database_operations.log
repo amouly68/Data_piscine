@@ -1,0 +1,3 @@
+2024-05-09 08:55:21,566 - INFO - Connected to the database successfully!
+2024-05-09 08:56:17,704 - INFO - SQL script from customers.sql executed successfully. Changes committed.
+2024-05-09 08:56:17,705 - INFO - Database connection closed.

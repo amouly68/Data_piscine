@@ -1,0 +1,63 @@
+import psycopg2
+import logging
+import argparse
+import os
+
+# Configuration du logging
+logging.basicConfig(filename='database_operations.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+def execute_sql_from_file(filename):
+    dbname = "piscineds"
+    user = "amouly"
+    password = "mysecretpassword"
+    host = "localhost"
+    port = "5432"
+    
+    try:
+        # Vérifier si le fichier existe
+        if not os.path.isfile(filename):
+            logging.error(f"Error: The file '{filename}' does not exist.")
+            return
+
+        conn = psycopg2.connect(
+            dbname=dbname,
+            user=user,
+            password=password,
+            host=host,
+            port=port
+        )
+        cursor = conn.cursor()
+        logging.info("Connected to the database successfully!")
+
+        # Lire le script SQL à partir d'un fichier
+        with open(filename, 'r') as file:
+            sql_script = file.read()
+
+        cursor.execute(sql_script)
+        conn.commit()
+
+        # Logger le succès de la requête
+        logging.info(f"SQL script from {filename} executed successfully. Changes committed.")
+
+    except Exception as e:
+        logging.error(f"An error occurred: {e}")
+        if conn:
+            conn.rollback()
+            logging.info("Changes have been rolled back due to an error.")
+        
+    finally:
+        if conn:
+            cursor.close()
+            conn.close()
+            logging.info("Database connection closed.")
+
+def main():
+    parser = argparse.ArgumentParser(description="Execute SQL script from a file.")
+    parser.add_argument('sqlfile', type=str, help="Path to the SQL file containing the script.")
+    
+    args = parser.parse_args()
+
+    execute_sql_from_file(args.sqlfile)
+
+if __name__ == "__main__":
+    main()
