@@ -1,6 +1,6 @@
 #add right to file
 docker run --rm -v "/home/amouly/Documents/Data_piscine/engineer/data_volume:/tmp/data_volume" ubuntu chmod -R 777 /tmp/data_volume
-
+docker run --rm -v "/goinfre/amouly/piscineds/db_volume:/tmp/data_volume" ubuntu chmod -R 777 /tmp/data_volume
 
 #SQL QUERY TO CREATE TABLE
 CREATE TABLE data_2022_oct (

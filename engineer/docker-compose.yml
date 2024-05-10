@@ -6,7 +6,7 @@ services:
     ports:
       - 5432:5432
     volumes:
-      # - ./data_volume:/var/lib/postgresql/data
+      - /goinfre/amouly/piscineds/db_data:/var/lib/postgresql/data
       - /goinfre/amouly/piscineds/csv_files:/csv_files
     restart: unless-stopped
     networks:
@@ -24,7 +24,7 @@ services:
     networks:
       - engineer
     volumes:
-      - /goinfre/amouly/piscineds/csv_files:/csv_files
+      - /goinfre/amouly/piscineds/csv_files:/home/pgadmin
       - ./servers.json:/pgadmin4/servers.json
 
 
