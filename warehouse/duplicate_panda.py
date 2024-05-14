@@ -2,8 +2,8 @@ import pandas as pd
 
 def main():
     file_path = "/goinfre/amouly/piscineds/csv_files/customer/data_2022_oct.csv"
-    df = pd.read_csv(file_path, nrows=100)
-    # df = pd.read_csv(file_path)
+    # df = pd.read_csv(file_path, nrows=100)
+    df = pd.read_csv(file_path)
     
     df['event_time'] = pd.to_datetime(df['event_time'])
     

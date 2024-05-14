@@ -1,52 +1,21 @@
-2024-05-10 13:22:57,361 - INFO - Connected to the database successfully!
-2024-05-10 13:22:57,441 - INFO - SQL script from create_table_test.sql executed successfully. Changes committed.
-2024-05-10 13:22:57,442 - INFO - Database connection closed.
-2024-05-10 13:23:36,944 - INFO - Connected to the database successfully!
-2024-05-10 13:23:37,074 - INFO - SQL script from duplicates_tables.sql executed successfully. Changes committed.
-2024-05-10 13:23:37,074 - INFO - Database connection closed.
-2024-05-10 13:24:48,918 - INFO - Connected to the database successfully!
-2024-05-10 13:24:48,971 - INFO - SQL script from unique_tables.sql executed successfully. Changes committed.
-2024-05-10 13:24:48,971 - INFO - Database connection closed.
-2024-05-10 13:30:56,551 - INFO - Connected to the database successfully!
-2024-05-10 13:30:56,621 - INFO - SQL script from create_table_test.sql executed successfully. Changes committed.
-2024-05-10 13:30:56,621 - INFO - Database connection closed.
-2024-05-10 13:31:26,439 - INFO - Connected to the database successfully!
-2024-05-10 13:31:26,510 - INFO - SQL script from duplicates_tables.sql executed successfully. Changes committed.
-2024-05-10 13:31:26,510 - INFO - Database connection closed.
-2024-05-10 13:51:45,812 - INFO - Connected to the database successfully!
-2024-05-10 13:51:45,838 - ERROR - An error occurred: relation "non_duplicates" already exists
+2024-05-14 10:43:47,869 - INFO - Connected to the database successfully!
+2024-05-14 10:43:47,997 - INFO - SQL script from create_table_test.sql executed successfully. Changes committed.
+2024-05-14 10:43:47,997 - INFO - Database connection closed.
+2024-05-14 10:44:16,456 - INFO - Connected to the database successfully!
+2024-05-14 10:51:46,278 - INFO - Database connection closed.
+2024-05-14 12:02:51,315 - INFO - Connected to the database successfully!
+2024-05-14 12:02:51,320 - ERROR - An error occurred: relation "items" does not exist
+LINE 8:     items
+            ^
 
-2024-05-10 13:51:45,838 - INFO - Changes have been rolled back due to an error.
-2024-05-10 13:51:45,838 - INFO - Database connection closed.
-2024-05-10 14:04:41,056 - INFO - Connected to the database successfully!
-2024-05-10 14:04:41,225 - INFO - SQL script from duplicates_tables.sql executed successfully. Changes committed.
-2024-05-10 14:04:41,225 - INFO - Database connection closed.
-2024-05-10 14:07:17,019 - INFO - Connected to the database successfully!
-2024-05-10 14:07:17,021 - ERROR - An error occurred: syntax error at or near "SORT"
-LINE 41: SORT BY event_time;
-         ^
-
-2024-05-10 14:07:17,021 - INFO - Changes have been rolled back due to an error.
-2024-05-10 14:07:17,021 - INFO - Database connection closed.
-2024-05-10 14:08:26,027 - INFO - Connected to the database successfully!
-2024-05-10 14:08:26,216 - INFO - SQL script from duplicates_tables.sql executed successfully. Changes committed.
-2024-05-10 14:08:26,216 - INFO - Database connection closed.
-2024-05-10 14:09:21,334 - INFO - Connected to the database successfully!
-2024-05-10 14:09:21,358 - INFO - SQL script from erase.duplicates.sql executed successfully. Changes committed.
-2024-05-10 14:09:21,358 - INFO - Database connection closed.
-2024-05-10 14:15:32,399 - INFO - Connected to the database successfully!
-2024-05-10 14:15:32,460 - INFO - SQL script from create_table_test.sql executed successfully. Changes committed.
-2024-05-10 14:15:32,460 - INFO - Database connection closed.
-2024-05-10 14:15:47,108 - INFO - Connected to the database successfully!
-2024-05-10 14:15:47,262 - INFO - SQL script from duplicates_tables.sql executed successfully. Changes committed.
-2024-05-10 14:15:47,262 - INFO - Database connection closed.
-2024-05-10 14:19:05,386 - INFO - Connected to the database successfully!
-2024-05-10 14:19:05,491 - INFO - SQL script from duplicates_tables.sql executed successfully. Changes committed.
-2024-05-10 14:19:05,491 - INFO - Database connection closed.
-2024-05-10 14:19:47,431 - INFO - Connected to the database successfully!
-2024-05-10 14:19:47,472 - INFO - SQL script from erase.duplicates.sql executed successfully. Changes committed.
-2024-05-10 14:19:47,474 - INFO - Database connection closed.
-2024-05-10 14:29:54,345 - INFO - Connected to the database successfully!
-2024-05-10 14:30:56,739 - INFO - SQL script from duplicates_tables.sql executed successfully. Changes committed.
-2024-05-10 14:30:56,739 - INFO - Database connection closed.
-2024-05-10 14:31:29,127 - INFO - Connected to the database successfully!
+2024-05-14 12:02:51,321 - INFO - Changes have been rolled back due to an error.
+2024-05-14 12:02:51,321 - INFO - Database connection closed.
+2024-05-14 12:03:16,402 - INFO - Connected to the database successfully!
+2024-05-14 12:03:16,664 - INFO - SQL script from create_item_nodup.sql executed successfully. Changes committed.
+2024-05-14 12:03:16,664 - INFO - Database connection closed.
+2024-05-14 12:04:53,500 - INFO - Connected to the database successfully!
+2024-05-14 12:04:53,656 - INFO - SQL script from create_join_table.sql executed successfully. Changes committed.
+2024-05-14 12:04:53,656 - INFO - Database connection closed.
+2024-05-14 12:06:39,899 - INFO - Connected to the database successfully!
+2024-05-14 12:06:39,968 - INFO - SQL script from create_join_table.sql executed successfully. Changes committed.
+2024-05-14 12:06:39,968 - INFO - Database connection closed.

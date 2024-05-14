@@ -7,7 +7,7 @@ SELECT *,
            THEN 1
            ELSE 0
        END AS is_duplicate
-FROM data_2022_oct;
+FROM test_table;
 CREATE TABLE duplicates AS
 SELECT *
 FROM temp_test_table

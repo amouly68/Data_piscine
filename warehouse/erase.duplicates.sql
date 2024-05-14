@@ -1,4 +1,4 @@
-DELETE FROM data_2022_oct
+DELETE FROM test_table
 WHERE ctid IN (
     SELECT current_ctid
     FROM (
