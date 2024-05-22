@@ -1,32 +1,45 @@
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
 
-# Charger les données
-train_data = pd.read_csv('/mnt/data/Train_knight.csv')
-test_data = pd.read_csv('/mnt/data/Test_knight.csv')
 
-# Vérifier la présence de la colonne 'knight'
-if 'knight' not in train_data.columns or 'knight' not in test_data.columns:
-    raise KeyError("La colonne 'knight' n'existe pas dans les données.")
 
-# Sélectionner les colonnes à standardiser (toutes sauf 'knight')
-features = train_data.columns.drop('knight')
 
-# Créer le scaler
+train = pd.read_csv('Train_knight.csv')
+test = pd.read_csv('Test_knight.csv')
+
+# train['knight'] = train['knight'].map({'Jedi': 1, 'Sith': 0})
+
+features = train.columns.drop('knight')
+train.head()
+
 scaler = StandardScaler()
 
-# Ajuster le scaler sur les données d'entraînement et transformer les données d'entraînement
-train_data_scaled = scaler.fit_transform(train_data[features])
-test_data_scaled = scaler.transform(test_data[features])
+train_scaled = scaler.fit_transform(train[features])
+test_scaled = scaler.fit_transform(test[features])
 
-# Convertir les résultats en DataFrame et rétablir les colonnes
-train_data_scaled = pd.DataFrame(train_data_scaled, columns=features)
-test_data_scaled = pd.DataFrame(test_data_scaled, columns=features)
+train_scaled = pd.DataFrame(train_scaled, columns=features)
+test_scaled = pd.DataFrame(test_scaled, columns=features)
 
-# Ajouter la colonne 'knight' non transformée aux DataFrames
-train_data_scaled['knight'] = train_data['knight']
-test_data_scaled['knight'] = test_data['knight']
+train_scaled['knight'] = train['knight']
 
-# Afficher un aperçu des données standardisées
-print(train_data_scaled.head())
-print(test_data_scaled.head())
+
+
+ex = train[train['Sensitivity'] == 17.99]
+ex
+ex_std = train_scaled.loc[360]
+ex_std
+ex1 = train_scaled.loc[214]
+ex1
+
+# #scatterplot with standardized data
+jedi = train_scaled[train_scaled['knight'] == 'Jedi']
+sith = train_scaled[train_scaled['knight'] == 'Sith']
+fig, ax = plt.subplots()
+
+ax.scatter(jedi['Empowered'], jedi['Stims'], c='blue', label='Jedi', alpha=0.8)
+ax.scatter(sith['Empowered'], sith['Stims'], c='red', label='Sith', alpha=0.5)
+ax.set_xlabel('Empowered')
+ax.set_ylabel('Stims')
+ax.legend(loc='upper left')
+plt.show()
