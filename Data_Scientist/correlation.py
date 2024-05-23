@@ -1,13 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import os
 from scipy.stats import pointbiserialr
 
 
-path = os.getcwd()
-path = path + '/Data_Scientist'
-
-path_train = path + '/Train_knight.csv'
 data = pd.read_csv('Train_knight.csv')
 
 data['knight'] = data['knight'].map({'Jedi': 0, 'Sith': 1})
