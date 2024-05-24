@@ -27,7 +27,7 @@ sith_visio.describe()
 
 
 
-fig, axes = plt.subplots(2, 2, figsize=(15, 15))
+fig, axes = plt.subplots(2, 2, figsize=(15, 10))
 
 for i, ax in enumerate(axes.flat):
     if i < 2:

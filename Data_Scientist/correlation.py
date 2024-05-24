@@ -5,7 +5,7 @@ from scipy.stats import pointbiserialr
 
 data = pd.read_csv('Train_knight.csv')
 
-data['knight'] = data['knight'].map({'Jedi': 1, 'Sith': 0})
+data['knight'] = data['knight'].map({'Jedi': 0, 'Sith': 1})
 correlations = data.corr(method='spearman')
 knight_correlations = correlations['knight']
 absolute_correlations = knight_correlations.abs()
