@@ -4,7 +4,9 @@ import sys
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
+from sklearn.decomposition import PCA
+
 
 def normalize_data(data):
     """
@@ -42,18 +44,21 @@ def calculate_variances(data_file):
         features = data
     
     normalized_data = normalize_data(features)
+
+    # Standardize the data
+    sc = StandardScaler()
+    sc.fit(normalized_data)
+    std_data = sc.transform(normalized_data)
+
     
-    # Calculate the variance of each skill in the normalized data
-    variances = normalized_data.var()
-    
-    # Sort the variances in descending order
-    sorted_variances = variances.sort_values(ascending=False)
+    # PCA
+    pca = PCA()
+    pca.fit_transform(std_data)
+    sorted_variances = pca.explained_variance_ratio_
     
     # Calculate the cumulative sum of the variances
-    cumulative_variances = sorted_variances.cumsum()
-    
-    # Normalize the cumulative variances to get a percentage
-    cumulative_variances_percentage = cumulative_variances / cumulative_variances.iloc[-1] * 100
+    cumulative_variances_percentage = sorted_variances.cumsum()
+    cumulative_variances_percentage *= 100
     
     return sorted_variances, cumulative_variances_percentage
 

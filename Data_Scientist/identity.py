@@ -18,3 +18,11 @@ train1.head()
 test.describe()
 test1.describe()
 
+#ADD variance on each colomn
+test1.var()
+
+#var cumulée
+test1.var().cumsum()
+
+#percentage of variance /var cumulée
+test1.var().cumsum()/test1.var().cumsum().iloc[-1]*100
