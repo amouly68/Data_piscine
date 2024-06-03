@@ -87,6 +87,7 @@ def main(data_file):
     
     # Normalize and standardize the data
     features = data.drop(columns=['knight']) if 'knight' in data.columns else data
+    
     standardized_data = normalize_and_standardize_data(features)
     
     # Calculate and remove high VIF features
@@ -98,7 +99,7 @@ def main(data_file):
     print("\nFinal features with VIF less than 5:")
     print(kept_features)
 
-    print("\nShap of the DF with VIF less than 5:")
+    print("\nShape of the DF with VIF less than 5:")
     print(filtered_data.shape)
 
 if __name__ == "__main__":

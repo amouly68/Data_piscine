@@ -29,26 +29,56 @@ sith_visio.describe()
 
 fig, axes = plt.subplots(2, 2, figsize=(15, 10))
 
+# for i, ax in enumerate(axes.flat):
+#     if i < 2:
+#         if i == 0:
+#             colx = 'Empowered'
+#             coly = 'Stims'
+#             leg_place = 'upper left'
+#         else:
+#             colx = 'Push'
+#             coly = 'Deflection'
+#             leg_place = 'upper right'
+#         ax.scatter(jedi[colx], jedi[coly], c='blue', label='Jedi')
+#         ax.scatter(sith[colx], sith[coly], c='red', label='Sith')
+#     else:
+#         if i == 2:
+#             colx = 'Empowered'
+#             coly = 'Stims'
+#             leg_place = 'upper left'
+#         else:
+#             colx = 'Push'
+#             coly = 'Deflection'
+#             leg_place = 'upper right'
+#         ax.scatter(test[colx], test[coly], c='green', label='Knight')
+#     ax.set_xlabel(colx)
+#     ax.set_ylabel(coly)q
+#     ax.legend(loc=leg_place)
+
+# plt.tight_layout()
+# plt.show()
+
+
 for i, ax in enumerate(axes.flat):
     if i < 2:
         if i == 0:
-            colx = 'Empowered'
-            coly = 'Stims'
+            colx = 'Sensitivity'
+            coly = 'Hability'
             leg_place = 'upper left'
         else:
-            colx = 'Push'
-            coly = 'Deflection'
+            colx = 'Strength'
+            coly = 'Power'
             leg_place = 'upper right'
         ax.scatter(jedi[colx], jedi[coly], c='blue', label='Jedi')
         ax.scatter(sith[colx], sith[coly], c='red', label='Sith')
     else:
         if i == 2:
-            colx = 'Empowered'
-            coly = 'Stims'
+            colx = 'Sensitivity'
+            coly = 'Hability'
             leg_place = 'upper left'
         else:
-            colx = 'Push'
-            coly = 'Deflection'
+            colx = 'Strength'
+            coly = 'Power'
             leg_place = 'upper right'
         ax.scatter(test[colx], test[coly], c='green', label='Knight')
     ax.set_xlabel(colx)
