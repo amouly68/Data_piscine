@@ -1,5 +1,0 @@
-
-2024-05-08 09:04:11,774 - INFO - Connected to the database successfully!
-2024-05-08 09:05:02,759 - INFO - Table 'customers' created and data merged successfully.
-2024-05-08 09:05:43,863 - INFO - Total rows in 'customers' table: 16536158
-2024-05-08 09:05:43,863 - INFO - Database connection closed.

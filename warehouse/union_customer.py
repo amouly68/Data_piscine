@@ -31,6 +31,8 @@ def create_merged_table():
         SELECT * FROM data_2022_oct
         UNION ALL
         SELECT * FROM data_2023_jan;
+        UNION ALL
+        SELECT * FROM data_2023_feb;
         """
         
         cursor.execute(sql_script)
